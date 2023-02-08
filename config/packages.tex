@@ -1,0 +1,114 @@
+% Copyright (c) 2021 by Tobias Gersdorf. All rights preserved.
+%
+% author: Tobias Gersdorf
+% date: 2021-01-12T20:27:38.860Z TG: first version
+%
+% file: packages.tex
+
+\usepackage[ngerman]{babel}
+\usepackage[yyyymmdd]{datetime}
+\usepackage[utf8]{inputenc}
+\usepackage[]{geometry}
+\usepackage{hyperref}
+\hypersetup{
+   breaklinks=true,
+   pdffitwindow=true,
+   colorlinks=true,
+   linkcolor=black, %[rgb]{0,0.5,0.5},
+   urlcolor=black,
+   citecolor=black,
+   pdftitle    = {\thetitle},
+   pdfsubject  = {\thesubject},
+   pdfauthor   = {\theautor},
+   pdfkeywords = {\pdfkeywords},
+   pdfcreator  = {\pdfcreator}
+}
+
+% ELSE -------------------------------------------------------------------------
+
+  %\usepackage[skip=5pt]{caption}
+  %\usepackage{graphics} %no options for graphical scale can passed to \includegraphics[..]{..} with this package
+  %\usepackage{graphicx}
+  %\usepackage{float}
+
+  % import pdfs
+  %\usepackage{pdfpages}
+
+  % subimport command
+  \usepackage{import}
+
+  % space after commands is inserted
+  \usepackage{xspace}
+
+  % variable indents of enums
+  %\usepackage{enumitem}
+
+  % shows margin frame
+  %\usepackage{showframe}
+
+% TABLES -----------------------------------------------------------------------
+%\usepackage{tabularx}
+%\usepackage{longtable}
+%\usepackage{multirow}
+% \usepackage{subcaption}
+
+% LISTINGS ---------------------------------------------------------------------
+%\usepackage{listings}
+%\lstset{
+  %numbers=left,
+  %backgroundcolor=\color{lightgray},
+%  language=C++,
+%  keywordstyle=\bfseries,
+  %identifierstyle=\color{gray},
+%  morekeywords={uint16_t},
+%  basicstyle={\sffamily\footnotesize},
+%  numberstyle={\ttfamily\scriptsize},
+%  aboveskip=15pt,
+%  belowskip=15pt,
+%  abovecaptionskip=15pt,
+%  belowcaptionskip=0pt,
+%  breaklines=true,
+%  linewidth=\textwidth,
+%  xleftmargin=43pt,
+%  xrightmargin=23pt,
+%  frame=single,
+%  framerule=1pt,
+%  rulecolor=\color{black},
+%  framexleftmargin=20pt,
+%  framexrightmargin=0pt,
+%  showstringspaces=false,
+%  captionpos=b
+%}
+
+% HEADER -----------------------------------------------------------------------
+%\usepackage{fancyhdr}
+%    \pagestyle{fancy}
+%    \fancyheadoffset{0.005\textwidth}
+%    \renewcommand{\headrulewidth}{0.1pt}
+%    \lhead{}
+%    \chead{}
+%    \rhead{}
+%    \fancyfoot[C]{}% Footer
+%}
+
+% NUMERATION -------------------------------------------------------------------
+  % numbering of figures and listings with section prefix
+  \usepackage{chngcntr}
+  \counterwithin{figure}{section}
+  \counterwithin{table}{section}
+  %\AtBeginDocument{\counterwithin{lstlisting}{part}}
+
+% GLOSSARY ---------------------------------------------------------------------
+  % insert after hyperref if links should be generated
+  %\usepackage[style=alttreegroup,
+  %  nonumberlist,
+  %  acronym,
+  %  toc,
+  %  section=section]{glossaries}
+  %\makeglossaries
+
+% APPENDIX ---------------------------------------------------------------------
+  %\usepackage{appendix}
+  %\renewcommand{\appendixname}{Alter me in packages.tex}
+  %\renewcommand{\appendixtocname}{Anhang}
+  %\renewcommand{\appendixpagename}{Anhang}

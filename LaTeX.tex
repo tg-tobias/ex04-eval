@@ -1,0 +1,58 @@
+% Copyright (c) 2021 by Tobias Gersdorf. All rights preserved.
+%
+% author: Tobias Gersdorf
+% date: 2021-01-12T20:32:28.139Z TG: first version
+%
+% file: requirements.tex
+
+\documentclass[a4paper, 10pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{config/meta}
+\input{config/definitions}
+\input{config/packages}
+\input{config/settings}
+\input{config/commands}
+\input{config/acronyms}
+\input{config/glossary}
+
+\begin{document}
+
+  \frontmatter
+
+  \begin{titlepage}
+    \maketitle
+    \thispagestyle{empty}
+  \end{titlepage}
+
+  \tableofcontents
+  \newpage
+  \clearpage
+
+% CONTENT --------------------------------------------------------------------
+  \mainmatter
+
+  \subimport{src/}{src.tex}
+
+% APPENDIX -------------------------------------------------------------------
+  \newpage
+  \backmatter
+%  \lhead{\textbf{Anhang}}
+%  \appendix
+%  \appendixpage
+  %\addappheadtotoc % issue: inserts as section
+%  \addcontentsline{toc}{part}{\appendixtocname}
+
+% GLOSSARIES -----------------------------------------------------------------
+%  \renewcommand{\glossarypreamble}{%
+%   \glsfindwidesttoplevelname[\currentglossary]%
+%  }% determin the widest word
+%  \printglossary[title=Abkürzungsverzeichnis,type=\acronymtype]
+%  \printglossary[title=Stichwortverzeichnis]
+
+% Literatur ------------------------------------------------------------------
+  % \renewcommand{\refname}{Literaturverzeichnis}
+  % \bibliography{res/sources}
+  % \bibliographystyle{ieeetr.bst} % DIN-Stil des Literaturverzeichnisses
+
+  \end{document}

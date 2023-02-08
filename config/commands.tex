@@ -1,0 +1,30 @@
+% Copyright (c) 2021 by Tobias Gersdorf. All rights preserved.
+%
+% author: Tobias Gersdorf
+% date: 2021-01-13T15:39:54.357Z TG: first version
+%
+% file: commands.tex
+
+\def\tablewidth{0.8\textwidth}
+\def\imagewidth{0.8\textwidth}
+
+% FRONT-/MAIN-/BACKMATTER ------------------------------------------------------
+
+\newcounter{frontcounter}
+\setcounter{frontcounter}{1}
+
+\def\frontmatter{%
+    \pagenumbering{roman}
+    \setcounter{page}{1}
+}%
+
+\def\mainmatter{%
+    \setcounter{frontcounter}{\value{page}}
+    \pagenumbering{arabic}
+    \setcounter{page}{1}
+}%
+
+\def\backmatter{%
+    \pagenumbering{roman}
+    \setcounter{page}{\value{frontcounter}}
+}%
